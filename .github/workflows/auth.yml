@@ -80,7 +80,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=auth-service
+            -Dsonar.projectKey=adajesus_msticket
             -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
             -Dsonar.sources=auth/src
             -Dsonar.tests=auth/src
