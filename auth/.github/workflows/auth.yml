@@ -2,18 +2,14 @@ name: Auth Service CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - main
-      - master
-    paths:
-      - 'auth/**'
-      - '.github/workflows/auth.yml'
+    branches: [main, master]
+    # paths:
+    #   - 'auth/**'
+    #   - '.github/workflows/auth.yml'
   pull_request:
-    branches:
-      - main
-      - master
-    paths:
-      - 'auth/**'
+    branches: [main, master]
+    # paths:
+    #   - 'auth/**'
 
 env:
   REGISTRY: docker.io
