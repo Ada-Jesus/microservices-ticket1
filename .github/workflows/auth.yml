@@ -92,7 +92,11 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --severity-threshold=high --file=${{ env.WORKING_DIR }}/package.json
+           args: >
+              --severity-threshold=high
+              --file=${{ env.WORKING_DIR }}/package.json
+              --project-name=auth-service
+              --org=ada-jesus
         continue-on-error: true
 
       - name: Upload Snyk results
